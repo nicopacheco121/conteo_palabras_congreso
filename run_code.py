@@ -27,8 +27,9 @@ primer_dia = primer_dia.add(tercer_dia, fill_value=0)
 primer_dia = f.filterDataEsp(primer_dia)
 primer_dia.sort_values(by='count', ascending=False, inplace=True)  # ordeno por cantidad de palabras
 print(primer_dia.head(top))
+primer_dia.to_excel('total.xlsx')
 
-# # grafico
+# grafico
 f.graf_1(primer_dia, 30, titulo='Conteo Palabras Congreso Total').show()
 f.graf_2(primer_dia, 30, titulo='Congreso Total Cloud').show()
 
